@@ -13,6 +13,8 @@ services:
       - "filebeat_data:/usr/share/filebeat/data:rw"
       - "/var/run/docker.sock:/var/run/docker.sock"
       - "/var/lib/docker/containers:/usr/share/dockerlogs/data:ro"
+    depends_on:
+      - echo_app
   echo_app:
     build:
       context: ./echo_service
