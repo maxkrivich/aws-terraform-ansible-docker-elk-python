@@ -1,0 +1,13 @@
+---
+  # This Playbool would setup ec2 server
+
+- name: Setup EC2 instances
+  hosts: aws_vms
+  become: true
+  remote_user: "{{ default_user }}"
+  roles:
+    - setup_ec2
+    - weareinteractive.environment
+  vars:
+    environment_config:
+      ELK_VERSION: 7.8.0  # ELK stack version

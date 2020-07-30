@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  filebeat:
+    network_mode: host
+    build:
+      context: ./filebeat
+      args:
+        ELK_VERSION: $ELK_VERSION
+    environment:
+      LS_HOST: $LS_HOST
+    volumes:
+      - "filebeat_data:/usr/share/filebeat/data:rw"
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      - "/var/lib/docker/containers:/usr/share/dockerlogs/data:ro"
+  echo_app:
+    build:
+      context: ./echo_service
+    ports: 
+      - "5000:5000"
+  
+volumes:
+  filebeat_data:

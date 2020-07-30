@@ -1,0 +1,12 @@
+---
+# This playbook would setup EC2 instance 
+
+- name: Docker instalation on EC2 instance
+  include: install_docker.yml
+  tags:
+    - docker
+
+- name: Cloning ELK-stack repo
+  include: clone_elk_repo.yml
+  tags:
+    - git
