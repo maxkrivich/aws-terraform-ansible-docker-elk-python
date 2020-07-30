@@ -1,5 +1,5 @@
-# ELK-stack + Docker-compose + Terraform + Ansible + AWS example
-This is a small example of ELK stack usage deployed to AWS cloud. For the purposes, I have used two t2.medium AWS EC2 instances, running linux installed with Docker and docker-compose. Instance 1st is running a python sanic web app and instance 2nd is running ELK stack (Elasticsearch, Logstash, Kibana). The infrastructure provisioned + configured with terraform and ansible.
+# ELK-stack + docker-compose + terraform + ansible + AWS example
+This is a small example of ELK stack usage deployed to AWS cloud. For the purposes, I have used two t2.medium AWS EC2 instances, running linux installed with Docker and docker-compose. Instance 1st is running a python sanic web app + filebeat and 2nd instance is running ELK stack (Elasticsearch, Logstash, Kibana). The infrastructure provisioned + configured with terraform and ansible.
 
 ![image](https://user-images.githubusercontent.com/12199867/88908304-fbfff780-d259-11ea-98cb-73df8d78c003.png)
 ![image](https://user-images.githubusercontent.com/12199867/88908351-09b57d00-d25a-11ea-9616-e122b38b59ef.png)
