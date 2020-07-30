@@ -28,6 +28,11 @@
 - name: Install docker-ce (centos) via amazon-linux-extras packages
   shell: "amazon-linux-extras install docker=18.06.1 -y"
 
+- name: Add used to docker group
+  user:
+    name: "{{ default_user }}"
+    group: docker
+
 - name: Enable Docker CE service at startup
   service:
     name: docker
@@ -35,6 +40,7 @@
     enabled: yes
 
 - name: Ensure Python pip packages are installed
+  become: yes
   pip:
     name: "{{ packages }}"
     executable: pip3

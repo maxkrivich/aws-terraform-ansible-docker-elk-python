@@ -25,7 +25,7 @@ variable "instance_ami" {
 }
 variable "instance_type" {
   description = "Type for aws EC2 instance"
-  default     = "t2.micro"
+  default     = "t2.medium"
 }
 variable "public_key_path" {
   description = "Public key path"
