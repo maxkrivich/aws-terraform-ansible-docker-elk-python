@@ -2,7 +2,7 @@
   # This Playbool would setup ec2 server
 
 - name: Setup EC2 instances
-  hosts: aws_vms
+  hosts: all
   become: true
   remote_user: "{{ default_user }}"
   roles:

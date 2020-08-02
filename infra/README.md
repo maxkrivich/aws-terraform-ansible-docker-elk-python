@@ -3,12 +3,10 @@ In this folder you can fine ansible and terraform scripts to create infrastractu
 
 ```bash
 $ cd terraform
-# put your credatntioals from AWS into .env
 $ terraform init
 $ terraform apply
 $ cd ../ansible
-# put server ips into inventory file hosts.yml
-$ ansible-playbook setup_ec2.yml
+$ EC2_INI_PATH=./inventory/ec2.ini ansible-playbook setup_ec2.yml
 ```
 
 

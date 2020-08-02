@@ -3,5 +3,5 @@
 
 - name: Cloning git repo from GitHub
   git:
-    repo: 'https://github.com/maxkrivich/aws-terrafrom-ansible-docker-elk-python.git'
+    repo: 'https://github.com/maxkrivich/aws-terraform-ansible-docker-elk-python.git'
     dest: /home/ec2-user/elk

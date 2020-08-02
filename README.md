@@ -8,6 +8,27 @@ This is a small example of ELK stack usage deployed to AWS cloud. For the purpos
 ### Description
 Each folder contains `README.md` file how to launch the whole environment.
 
+### Pre-install
+```bash
+$ pip install boto==2.49.0
+$ ansible-galaxy install -r infra/ansible/requirements.yml
+```
+
+### Make usage
+
+```bash
+$ make help
+help                           This help
+terraform-init                 Init terraform project
+terraform-plan                 Show terraform plan to apply
+terraform-apply                Apply changes on infrastructure
+ansible-setup                  Setup EC2 instances
+elk-up                         Launch ELK stack
+elk-down                       Stop ELK stack
+echo-up                        Launch echo service + filebeat
+echo-down                      Stop echo service + filebeat
+clean-pyc                      Remove complied files
+```
 
 ### Links
 * https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html
