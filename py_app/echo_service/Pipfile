@@ -10,7 +10,7 @@ ujson = "*"
 uvloop = "*"
 uvicorn = "*"
 sanic-json-logging = "*"
-sanic = "==19.12.0"
+sanic = "==20.12.6"
 
 [requires]
 python_version = "3.8"
